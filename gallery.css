@@ -1,0 +1,216 @@
+body{
+    overflow-x: hidden;
+    height: fit-content;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}
+.sketch {
+    display: grid; /* Use Grid for layout */
+    grid-template-columns: repeat(4, 1fr); /* 3 columns */
+    grid-auto-rows: 1fr; /* Equal row heights */
+    gap: 15px; /* Add space between items */
+    justify-content: center; /* Center horizontally */
+    align-content: center; /* Center vertically */
+    max-width: 950px; /* Restrict container width */
+    margin: auto; /* Center container on the page */
+    padding-top: 40px;
+
+}
+
+img {
+    width: 100%; /* Make images responsive */
+    border-radius: 10px; /* Add modern rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    object-fit: cover; /* Ensure images fit within their grid cells */
+}
+
+/* Fullscreen viewer container */
+.fullscreen-viewer {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Darker background */
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Image styling: Preserve aspect ratio, no cropping */
+.fullscreen-viewer img {
+    max-width: 80%;
+    max-height: 80%;
+    width: fit-content;
+    object-fit: contain; /* Ensures the entire image is visible */
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Modern shadow */
+}
+
+/* Navigation buttons (Previous & Next) */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    padding: 10px 20px;
+    font-size: 24px;
+    color: white;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+.nav-button:hover {
+    background: rgba(255, 255, 255, 0.519);
+}
+
+/* Position navigation buttons */
+#prevButton {
+    left: 20px;
+}
+#nextButton {
+    right: 20px;
+}
+
+/* Close button */
+/* Close button - bottom center */
+.close-button {
+    position: absolute;
+    bottom: 20px; /* Positioned at the bottom of the viewer */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center alignment adjustment */
+    background: transparent; /* Transparent background */
+    border: none;
+    color: white; /* White text color for visibility */
+    padding: 10px 20px; /* Padding for a larger clickable area */
+    font-size: 18px; /* Slightly smaller font for a cleaner look */
+    cursor: pointer;
+    font-family: "Code Next Book";
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: rgba(255, 255, 255, 0.7); /* Subtle hover effect */
+}
+
+
+
+/* Slide animations */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideOutLeft {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+/* Animation classes */
+.slide-in-right {
+    animation: slideInRight 0.5s ease forwards;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.5s ease forwards;
+}
+
+.slide-out-right {
+    animation: slideOutRight 0.5s ease forwards;
+}
+
+.slide-out-left {
+    animation: slideOutLeft 0.5s ease forwards;
+}
+
+
+@media screen and (max-width:1167px) {
+    .sketch {
+        display: grid; /* Use Grid for layout */
+        grid-template-columns: repeat(4, 1fr); /* 3 columns */
+        grid-auto-rows: 1fr; /* Equal row heights */
+        gap: 15px; /* Add space between items */
+        justify-content: center; /* Center horizontally */
+        align-content: center; /* Center vertically */
+        max-width: 950px; /* Restrict container width */
+        margin: auto; /* Center container on the page */
+        padding-top: 40px;
+        padding-left: 90px;
+        padding-right: 90px;
+    
+    }   
+}
+
+@media screen and (max-width:800px) {
+    .sketch {
+        display: grid; /* Use Grid for layout */
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        grid-auto-rows: 1fr; /* Equal row heights */
+        gap: 10px; /* Add space between items */
+        justify-content: center; /* Center horizontally */
+        align-content: center; /* Center vertically */
+        max-width: 950px; /* Restrict container width */
+        margin: auto; /* Center container on the page */
+        padding-top: 40px;
+        padding-left: 60px;
+        padding-right: 60px;
+    
+    }   
+}
+@media screen and (max-width:426px) {
+    .sketch {
+        display: grid; /* Use Grid for layout */
+        grid-template-columns: repeat(2, 1fr); /* 3 columns */
+        grid-auto-rows: 1fr; /* Equal row heights */
+        gap: 10px; /* Add space between items */
+        justify-content: center; /* Center horizontally */
+        align-content: center; /* Center vertically */
+        max-width: 950px; /* Restrict container width */
+        margin: auto; /* Center container on the page */
+        padding-top: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+    
+    }   
+}
