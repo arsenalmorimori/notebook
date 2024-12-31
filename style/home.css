@@ -1,0 +1,393 @@
+:root{
+    --blue:#1da7ff;
+    --blueUnHigh:#9ddaff;
+    --blueBg:(355deg, rgba(51,206,255,1) 41%, rgba(30,178,255,1) 92%);
+}
+
+body{
+    user-select: 400%;
+}
+
+.homePage{
+    width: 100vw;
+    height:100dvh;
+    margin: 0px;
+    padding: 0px;
+}
+
+  
+.material-symbols-rounded {
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 200,
+      'GRAD' -25,
+      'opsz' 24;
+  }
+/* Sticky container settings */
+.backToHomeDiv {
+    position: sticky;
+    top: 90%; /* Distance from the top */
+    z-index: 1000; /* Ensure it's on top */
+}
+
+/* Styling for the back-to-home button */
+.backToHome {
+    background-color: white;
+    width: fit-content;
+    padding: 5px 15px 5px 20px;
+    display: flex; /* Enable Flexbox */
+    align-items: center; /* Vertically center text and icon */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 2px 6px #7ccdffbb; /* Light shadow */
+    margin: 0 auto; /* Horizontally center the element */
+}
+
+.backToHomeDiv {
+    position: sticky;
+    top: 90%; /* Distance from the top */
+    z-index: 1000; /* Ensure it's on top */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease; /* Smooth transition for fade-in and fade-out */
+}
+
+
+/* Styling for the text */
+.material-symbols-rounded{
+    font-size: 20px;
+}
+.backToHomeText {
+    font-family: "Code Next Book";
+    font-weight: 300;
+    padding-top: 2px;
+    margin-left: 7px; /* Adds space between the icon and text */
+    font-size: 15px;
+}
+.backToHomeDiv:hover {
+    /* Change color of all child elements to blue when the div is hovered */
+  }
+  
+  .backToHomeDiv:hover .material-symbols-rounded,
+  .backToHomeDiv:hover .backToHomeText {
+    color: var(--blue); /* Apply blue color on hover */
+  }
+  
+  
+.nav {
+    position: sticky;
+    top: 35px;
+    margin-bottom: -35px;
+    margin-left: auto; /* Pushes the .nav element to the right */
+    margin-right: 90px; /* Adds space from the right */
+    width: fit-content; /* Ensures the element doesn't stretch unnecessarily */
+}
+
+.n1,.n2,.n3,.n4{
+    transition: 0.5s;
+}
+.n1{
+    text-decoration: underline;
+}
+.n2,.n3,.n4{
+    color: var(--blueUnHigh);
+}
+.n2:hover ,.n3:hover ,.n4:hover  {
+    color: var(--blue);
+    text-decoration: underline;
+}
+.n2:hover ~ .n1, .n3:hover ~ .n1, .n4:hover ~ .n1 {
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+    margin-left: 50px;
+    font-family: "Code Next Book";
+    color: var(--blue);
+    font-size: 20px;
+}
+.navP {
+    transition: opacity 0.5s ease, visibility 0s 0.5s; /* Smooth fade-out transition */
+    opacity: 1;
+    visibility: visible;
+}
+
+.navP.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0s 0s; /* Smooth fade-out when hidden */
+}
+
+.navP.show {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease; /* Smooth fade-in when shown again */
+}
+
+
+
+/* HOME BODY */
+.homePic{
+    width: 500px;
+}
+.homeP1{
+    margin-top: 50px;
+    margin-bottom: -148px;
+    margin-right: 550px;
+    width: 330px;
+}
+.homeP2{
+    width: 680px;
+    margin-top: -175px;
+    margin-right: 140px;
+}
+.homeAssetText{
+    width: 460px;
+    margin-left: 620px;
+    margin-top: 140px;
+    margin-bottom: -420px;
+}
+.homeAssetLeft{
+    position: absolute;
+    left: 0px;
+    top: 230px;
+    width: 340px;
+}
+.homeAssetBot{
+    position: absolute;
+    bottom: 0px;
+    right: 90px;
+    height: 160px;
+}
+
+/* NAV */
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 25px;
+}
+
+.menu-toggle .bar {
+    height: 1.5px;
+    width: 100%;
+    background-color: var(--blue);
+    border-radius: 10px;
+}
+.menu-toggle {
+    transition: opacity 0.5s ease, visibility 0s 0.5s; /* Smooth fade-out transition */
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-toggle.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0s 0s; /* Smooth fade-out when hidden */
+}
+
+.menu-toggle.show {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease; /* Smooth fade-in when shown again */
+}
+
+
+
+
+
+/* RESPONSIVE */ 
+/* ---- LAPTOP ---- */
+@media screen and (max-width:1090px) {
+    .nav{
+        position: sticky;
+        top: 35px;
+        margin-bottom: -75px;
+        margin-left: auto; /* Pushes the .nav element to the right */
+        margin-right: 90px; /* Adds space from the right */
+        width: fit-content; /* Ensures the element doesn't stretch unnecessarily */
+    }
+    a{
+        margin-left: 50px;
+        font-family: "Code Next Book";
+        color: var(--blue);
+        font-size: 18px;
+    }
+    .homePic{
+        width: 400px;
+    }
+    .homeP1{
+        margin-top: 85px;
+        margin-bottom: -120px;
+        margin-right: 430px;
+        width: 290px;
+    }
+    .homeP2{
+        width: 550px;
+        margin-top: -135px;
+        margin-right: 100px;
+    }
+    .homeAssetText{
+        width: 400px;
+        margin-left: 500px;
+        margin-top: 120px;
+        margin-bottom: -360px;
+    }
+    .homeAssetLeft{
+        position: absolute;
+        left: 0px;
+        top: 270px;
+        width: 300px;
+    }
+    .homeAssetBot{
+        position: absolute;
+        bottom: 0px;
+        right: 90px;
+        height: 120px;
+    }
+    
+}
+
+
+/* ---- LAPTOP S ---- */
+@media screen and (max-width:968px) {
+    .nav{
+        position: sticky;
+        top: 35px;
+        margin-bottom: -35px;
+        margin-left: auto; /* Pushes the .nav element to the right */
+        margin-right: 90px; /* Adds space from the right */
+        width: fit-content; /* Ensures the element doesn't stretch unnecessarily */
+    }
+    a{
+        margin-left: 20px;
+        font-family: "Code Next Book";
+        color: var(--blue);
+        font-size: 13px;
+    }
+    .homePic{
+        width: 290px;
+    }
+    .homeP1{
+        margin-top: 60px;
+        margin-bottom: -120px;
+        margin-right: 200px;
+        width: 200px;
+    }
+    .homeP2{
+        width: 400px;
+        margin-top: -60px;
+        margin-right: 0px;
+    }
+    .homeAssetText{
+        width: 250px;
+        margin-left:320px;
+        margin-right: 0px;
+        margin-bottom: -240px;
+        margin-top: 160px;
+    }
+    .homeAssetLeft{
+        position: absolute;
+        left: 0px;
+        top: 230px;
+        width: 170px;
+    }
+    .homeAssetBot{
+        position: absolute;
+        bottom: 0px;
+        right: 90px;
+        height: 80px;
+    }
+}
+
+
+/* ---- PHONE ---- */
+@media screen and (max-width:579px) {
+    .material-symbols-rounded{
+        font-size: 15px;
+    }
+    .backToHomeText {
+        font-family: "Code Next Book";
+        font-weight: 300;
+        padding-top: 2px;
+        margin-left: 7px; /* Adds space between the icon and text */
+        font-size: 10px;
+    }
+    .nav{
+        position: absolute;
+        right: 50px;
+        margin-right: 0px;
+    }
+    a{
+        margin-left: 20px;
+        font-family: "Code Next Book";
+        color: var(--blue);
+        font-size: 13px;
+    }
+    .homePic{
+        width: 180px;
+    }
+    .homeP1{
+        margin-top: 75px;
+        margin-bottom: -90px;
+        margin-right: 110px;
+        width: 160px;
+    }
+    .homeP2{
+        width: 260px;
+        margin-top: -30px;
+        margin-right: 0px;
+    }
+    .homeAssetText{
+        width: 200px;
+        margin-left:0px;
+        margin-right: 10px;
+        margin-bottom: -420px;
+        margin-top: 370px;
+    }
+    .homeAssetLeft{
+        position: absolute;
+        left: 0px;
+        top: 170px;
+        width: 80px;
+    }
+    .homeAssetBot{
+        position: absolute;
+        bottom: 0px;
+        right: 20px;
+        height: 50px;
+    }
+
+    /* NAV */
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        right: -20px;
+        top: 15px;
+    }
+
+    .navP {
+        display: none; /* Initially hide navigation links */
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(255, 255, 255, 0.8); /* Low-opacity white background */
+        padding: 15px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navP a {
+        margin: 10px 0; /* Vertical spacing for links */
+    }
+
+    .navP.active {
+        display: flex; /* Show navigation links when active */
+    }
+    
+}
+

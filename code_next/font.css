@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "Code Next Book";
+    src: url(CodeNext-Trial-Book.ttf);
+}
+@font-face {
+    font-family: "Code Next Book Italic";
+    src: url(CodeNext-Trial-BookItalic.ttf);
+}
+@font-face {
+    font-family: "Code Next Heavy";
+    src: url(CodeNext-Trial-Heavy.ttf)
+}
+@font-face {
+    font-family: "Code Next Heavy Italic";
+    src:  url(CodeNext-Trial-HeavyItalic.ttf)
+}
+
+@font-face {
+    font-family: "Code Next ExtraBold";
+    src:url(CodeNext-Trial-ExtraBold.ttf)
+}

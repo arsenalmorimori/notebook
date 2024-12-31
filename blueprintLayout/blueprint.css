@@ -1,0 +1,35 @@
+/* Ensure no overflow on the body */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Removes horizontal scrolling */
+}
+
+/* Custom scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+    width: 0px; /* Width of the vertical scrollbar */
+    height: 0px; /* Height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #ffffff; /* Track color */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3498db; /* Scrollbar thumb color */
+    border-radius: 10px; /* Rounded edges */
+    border: 3px solid #ffffff; /* Adds spacing around the thumb */
+}
+
+/* Custom scrollbar for Firefox */
+body {
+    scrollbar-width: thin; /* Makes scrollbar thinner */
+    scrollbar-color: #3498db #ffffff; /* Thumb and track colors */
+}
+
+/* Ensure no overflow for specific elements */
+img {
+    max-width: 100%;
+    display: block; /* Avoid inline spacing issues */
+}

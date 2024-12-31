@@ -1,0 +1,341 @@
+.aboutPage{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(51,206,255);
+    background: linear-gradient(180deg, rgba(51,206,255,1) 5%, rgba(14,174,255,1) 98%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: -100px;
+}
+.aboutAssetLeft{
+    width: 290px;
+    position: absolute;
+    top: 110%;
+}
+.aboutAssetBot{
+    width: 290px;
+    position: absolute;
+    top: 185dvh;
+    right: 290px;
+}
+.aboutTextDiv{
+    grid-column: 1/2;
+}
+.aboutTextDiv h1{
+    color: white;
+    font-family: "Code Next Book Italic";
+    font-weight: 100;
+    font-size: 85px;
+    margin-left: 200px;
+    margin-top: 150px;
+    margin-bottom: 30px;
+}
+.aboutTextDiv h2{
+    color: white;
+    font-family: "Code Next Book Italic";
+    font-weight: 100;
+    font-size: 20px;
+    margin-left: 200px;
+}
+.aboutPic{
+    grid-column: 2/3;
+    width: 670px;
+    padding-top: 90px;
+    
+}
+
+.aboutIconGithub{
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
+    transition: 0.5s;
+}
+.aboutIcon{
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+}
+.aboutIconDiv{
+    width: fit-content;
+    height: 55px;
+    display: flex;
+    margin-left: 200px;
+    margin-top: 25px;
+}
+.aboutIconGithub:hover{
+    width: 55px;
+    height: 55px;
+}
+.aboutIcon:hover{
+    width: 55px;
+    height: 55px;
+}
+.aboutIconWrapper {
+    position: relative;
+    display: inline-block; /* Keeps icons inline */
+}
+
+.aboutTooltip {
+    visibility: hidden;
+    opacity: 0;
+    width: auto;
+    background-color: #333;
+    font-family: "arial";
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 100%; /* Position the tooltip above the icon */
+    left: 50%;
+    white-space: nowrap;
+    font-size: 12px;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 10;
+}
+
+.aboutIconWrapper:hover .aboutTooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Hover effect for icons */
+.aboutIcon:hover, .aboutIconGithub:hover {
+    width: 55px;
+    height: 55px;
+    transition: 0.5s;
+}
+
+
+
+/* RESPONSIVE */
+
+/* ---- LAPTOP ---- */
+@media screen and (max-width: 1111px) {  
+.aboutAssetLeft{
+    width: 290px;
+    position: absolute;
+    top: 110%;
+}
+.aboutAssetBot{
+    width: 290px;
+    position: absolute;
+    top: 185dvh;
+    right: 290px;
+}
+.aboutTextDiv{
+    grid-column: 1/2;
+}
+.aboutTextDiv h1{
+    color: white;
+    font-family: "Code Next Book Italic";
+    font-weight: 100;
+    font-size: 50px;
+    margin-left: 90px;
+    margin-top: 150px;
+    margin-bottom: 30px;
+}
+.aboutTextDiv h2{
+    color: white;
+    font-family: "Code Next Book Italic";
+    font-weight: 100;
+    font-size: 15px;
+    margin-left: 90px;
+}
+.aboutPic{
+    grid-column: 2/3;
+    width: 560px;
+    padding-top: 90px;
+}
+
+.aboutIconGithub{
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+}
+.aboutIcon{
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+}
+.aboutIconDiv{
+    width: fit-content;
+    height: 45px;
+    display: flex;
+    margin-left: 90px;
+    margin-top: 25px;
+}
+.aboutIconGithub:hover{
+    width: 45px;
+    height: 45px;
+}
+.aboutIcon:hover{
+    width: 45px;
+    height: 45px;
+}
+.aboutIconGithub{
+    margin-left: 30px;
+}
+}
+
+/* ---- LAPTOP S ---- */
+@media screen and (max-width:968px) {
+  
+    .aboutAssetLeft{
+        width: 290px;
+        position: absolute;
+        top: 110%;
+    }
+    .aboutAssetBot{
+        width: 290px;
+        position: absolute;
+        top: 185dvh;
+        right: 290px;
+    }
+    .aboutTextDiv{
+        grid-column: 1/2;
+    }
+    .aboutTextDiv h1{
+        color: white;
+        font-family: "Code Next Book Italic";
+        font-weight: 100;
+        font-size: 60px;
+        margin-left: 90px;
+        margin-top: 150px;
+        margin-bottom: 30px;
+    }
+    .aboutTextDiv h2{
+        color: white;
+        font-family: "Code Next Book Italic";
+        font-weight: 100;
+        font-size: 13px;
+        margin-left: 90px;
+    }
+    .aboutPic {
+        grid-column: 2/3;
+        width: 560px;
+        margin-top: -90px;
+        align-self: center; /* Centers vertically within the grid row */
+        justify-self: center; /* Optional: Centers horizontally if needed */
+    }
+    
+
+    .aboutIconGithub{
+        width: 40px;
+        height: 40px;
+        transition: 0.5s;
+    }
+    .aboutIcon{
+        width: 40px;
+        height: 40px;
+        transition: 0.5s;
+    }
+    .aboutIconDiv{
+        width: fit-content;
+        height: 45px;
+        display: flex;
+        margin-left: 90px;
+        margin-top: 25px;
+    }
+    .aboutIconGithub:hover{
+        width: 45px;
+        height: 45px;
+    }
+    .aboutIcon:hover{
+        width: 45px;
+        height: 45px;
+    }
+    .aboutIconGithub{
+        margin-left: 30px;
+    }
+    
+
+}
+
+
+
+/* ---- PHONE ---- */
+@media screen and (max-width:600px) {
+    .aboutPage{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .aboutAssetLeft{
+        width: 150px;
+        position: absolute;
+        top: 110%;
+        right: -30px;
+        transform: rotate(90deg); /* Rotates the element 90 degrees */
+    }
+    .aboutAssetBot{
+        width: 160px;
+        position: absolute;
+        top: 190dvh;
+        right: 10px;
+    }
+    .aboutTextDiv{
+        grid-row: 1/2;
+        grid-column: 1/3;
+    }
+    .aboutTextDiv h1{
+        color: white;
+        font-family: "Code Next Book Italic";
+        font-weight: 100;
+        font-size: 40px;
+        margin-left: 50px;
+        margin-top: 50px;
+        margin-bottom: 15px;
+    }
+    .aboutTextDiv h2{
+        color: white;
+        font-family: "Code Next Book Italic";
+        font-weight: 100;
+        font-size: 10px;
+        margin-left: 50px;
+        margin-right: 80px;
+    }
+    .aboutPic {
+        grid-row: 2/3;
+        grid-column: 1/3;
+        width: 270px;
+        margin-top: -90px;
+    }
+    .aboutIconDiv{
+        width: 20px;
+        display: flex;
+        margin-left: 50px;
+        margin-top: 15px;
+    }
+    .aboutIconGithub{
+        margin-left: 30px;
+    }
+    
+.aboutIconGithub{
+    width: 20px;
+    height: 20px;
+    transition: 0.5s;
+}
+.aboutIcon{
+    width: 20px;
+    height: 20px;
+    transition: 0.5s;
+}
+.aboutIconDiv{
+    width: fit-content;
+    height: 25px;
+    display: flex;
+    margin-left: 90px;
+    margin-top: 25px;
+}
+.aboutIconGithub:hover{
+    width: 25px;
+    height: 25px;
+}
+.aboutIcon:hover{
+    width: 25px;
+    height: 25px;
+}
+.aboutIconGithub{
+    margin-left: 30px;
+}
+}
