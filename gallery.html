@@ -3,33 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Image Gallery</title>
     <link rel="stylesheet" href="gallery.css">
     <link rel="stylesheet" href="code_next/font.css">
     <link rel="stylesheet" href="style/overflow.css">
+    <link rel="preload" as="image" href="img/sketchbook/sketch1.jpg">
 </head>
 <body>
     <div class="sketch">
-        <img src="img/sketchbook/sketch1.jpg"/>
-        <img src="img/sketchbook/sketch2.jpg"/>
-        <img src="img/sketchbook/sketch3.jpg"/>
-        <img src="img/sketchbook/sketch4.jpg"/>
-        <img src="img/sketchbook/sketch5.jpg"/>
-        <img src="img/sketchbook/sketch6.jpg"/>
-        <img src="img/sketchbook/sketch7.jpg"/>
-        <img src="img/sketchbook/sketch8.jpg"/>
-        <img src="img/sketchbook/sketch9.jpg"/>
-        <img src="img/sketchbook/sketch10.jpg"/>
-        <img src="img/sketchbook/sketch11.jpg"/>
-        <img src="img/sketchbook/sketch12.jpg"/>
-        <img src="img/sketchbook/sketch13.jpg"/>
-        <img src="img/sketchbook/sketch14.jpg"/>
+        <img src="img/sketchbook/sketch1.jpg" loading="lazy" alt="Sketch 1" />
+        <img src="img/sketchbook/sketch2.jpg" loading="lazy" alt="Sketch 2" />
+        <img src="img/sketchbook/sketch3.jpg" loading="lazy" alt="Sketch 3" />
+        <img src="img/sketchbook/sketch4.jpg" loading="lazy" alt="Sketch 4" />
+        <img src="img/sketchbook/sketch5.jpg" loading="lazy" alt="Sketch 5" />
+        <img src="img/sketchbook/sketch6.jpg" loading="lazy" alt="Sketch 6" />
+        <img src="img/sketchbook/sketch7.jpg" loading="lazy" alt="Sketch 7" />
+        <img src="img/sketchbook/sketch8.jpg" loading="lazy" alt="Sketch 8" />
+        <img src="img/sketchbook/sketch9.jpg" loading="lazy" alt="Sketch 9" />
+        <img src="img/sketchbook/sketch10.jpg" loading="lazy" alt="Sketch 10" />
+        <img src="img/sketchbook/sketch11.jpg" loading="lazy" alt="Sketch 11" />
+        <img src="img/sketchbook/sketch12.jpg" loading="lazy" alt="Sketch 12" />
+        <img src="img/sketchbook/sketch13.jpg" loading="lazy" alt="Sketch 13" />
+        <img src="img/sketchbook/sketch14.jpg" loading="lazy" alt="Sketch 14" />
     </div>
 
     <div id="fullscreenViewer" class="fullscreen-viewer">
         <button id="prevButton" class="nav-button">❮</button>
         <img id="viewerImage" src="" alt="Fullscreen Image" />
-        <button id="closeButton" class="close-button">close</button>
+        <button id="closeButton" class="close-button">Close</button>
         <button id="nextButton" class="nav-button">❯</button>
     </div>
 
