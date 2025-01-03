@@ -1,54 +1,66 @@
-body {
+body{
     overflow-x: hidden;
+    height: fit-content;
+    width: 100vw;
     height: 100vh;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
-
 .sketch {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-    max-width: 950px;
-    margin: auto;
-    padding: 40px 20px;
+    display: grid; /* Use Grid for layout */
+    grid-template-columns: repeat(4, 1fr); /* 3 columns */
+    grid-auto-rows: 1fr; /* Equal row heights */
+    gap: 15px; /* Add space between items */
+    justify-content: center; /* Center horizontally */
+    align-content: center; /* Center vertically */
+    max-width: 950px; /* Restrict container width */
+    margin: auto; /* Center container on the page */
+    padding-top: 40px;
+
 }
 
 img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
+    width: 100%; /* Make images responsive */
+    border-radius: 10px; /* Add modern rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    object-fit: cover; /* Ensure images fit within their grid cells */
 }
 
-/* Fullscreen Viewer */
+/* Fullscreen viewer container */
 .fullscreen-viewer {
-    display: none;
+    display: none; /* Hidden by default */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.9); /* Darker background */
     align-items: center;
     justify-content: center;
     z-index: 9999;
+    overflow: hidden; /* Prevent scrolling */
 }
 
+/* Image styling: Preserve aspect ratio, no cropping */
 .fullscreen-viewer img {
     max-width: 80%;
     max-height: 80%;
-    object-fit: contain;
+    width: fit-content;
+    object-fit: contain; /* Ensures the entire image is visible */
     border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Modern shadow */
 }
 
+/* Navigation buttons (Previous & Next) */
 .nav-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     border: none;
+    padding: 10px 20px;
     font-size: 24px;
     color: white;
+    border-radius: 50%;
     background: transparent;
     cursor: pointer;
     z-index: 1000;
@@ -56,9 +68,10 @@ img {
 }
 
 .nav-button:hover {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.519);
 }
 
+/* Position navigation buttons */
 #prevButton {
     left: 20px;
 }
@@ -66,22 +79,26 @@ img {
     right: 20px;
 }
 
+/* Close button */
+/* Close button - bottom center */
 .close-button {
     position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 20px; /* Positioned at the bottom of the viewer */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center alignment adjustment */
+    background: transparent; /* Transparent background */
     border: none;
-    font-size: 18px;
-    color: white;
-    background: transparent;
+    color: white; /* White text color for visibility */
+    padding: 10px 20px; /* Padding for a larger clickable area */
+    font-size: 18px; /* Slightly smaller font for a cleaner look */
     cursor: pointer;
+    font-family: "Code Next Book";
+    transition: color 0.3s ease;
 }
 
 .close-button:hover {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.7); /* Subtle hover effect */
 }
-
 /* Animations */
 @keyframes slideIn {
     from { opacity: 0; transform: scale(0.8); }
@@ -97,4 +114,55 @@ img {
 }
 .slide-out {
     animation: slideOut 0.5s ease-out forwards;
+}
+
+
+@media screen and (max-width:1167px) {
+    .sketch {
+        display: grid; /* Use Grid for layout */
+        grid-template-columns: repeat(4, 1fr); /* 3 columns */
+        grid-auto-rows: 1fr; /* Equal row heights */
+        gap: 15px; /* Add space between items */
+        justify-content: center; /* Center horizontally */
+        align-content: center; /* Center vertically */
+        max-width: 950px; /* Restrict container width */
+        margin: auto; /* Center container on the page */
+        padding-top: 40px;
+        padding-left: 90px;
+        padding-right: 90px;
+    
+    }   
+}
+
+@media screen and (max-width:800px) {
+    .sketch {
+        display: grid; /* Use Grid for layout */
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        grid-auto-rows: 1fr; /* Equal row heights */
+        gap: 10px; /* Add space between items */
+        justify-content: center; /* Center horizontally */
+        align-content: center; /* Center vertically */
+        max-width: 950px; /* Restrict container width */
+        margin: auto; /* Center container on the page */
+        padding-top: 40px;
+        padding-left: 60px;
+        padding-right: 60px;
+    
+    }   
+}
+@media screen and (max-width:426px) {
+    .sketch {
+        display: grid; /* Use Grid for layout */
+        grid-template-columns: repeat(2, 1fr); /* 3 columns */
+        grid-auto-rows: 1fr; /* Equal row heights */
+        gap: 10px; /* Add space between items */
+        justify-content: center; /* Center horizontally */
+        align-content: center; /* Center vertically */
+        max-width: 950px; /* Restrict container width */
+        margin: auto; /* Center container on the page */
+        padding-top: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+    
+    }   
 }

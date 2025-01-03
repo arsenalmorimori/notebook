@@ -26,7 +26,7 @@
     color: white;
     font-family: "Code Next ExtraBold";
     font-size: 100px;
-    margin-bottom: -170px;
+    margin-bottom: -200px;
 }
 .projectLeft h2{
     font-size: 130px;
@@ -74,7 +74,7 @@
     color: white;
     font-family: "Code Next ExtraBold";
     font-size: 80px;
-    margin-bottom: -130px;
+    margin-bottom: -160px;
 }
 .projectLeft h2{
     font-size: 100px;
@@ -127,6 +127,7 @@
         margin-bottom: -110px;
     }
     .projectLeft h2{
+        margin-top: 20px;
         font-size: 80px;
         color: white;
         font-family: "Code Next ExtraBold";
@@ -140,7 +141,15 @@
     }
 }
 
-
+a{
+    text-decoration: none;
+    transition: 0.9s;
+}
+a:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 6px;
+    color: white;
+}
 
 /* ---- PHONE L ---- */
 @media screen and (max-width:782px) {

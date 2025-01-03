@@ -1,4 +1,266 @@
+:root{
+    --blue:#1da7ff;
+    --blueUnHigh:#9ddaff;
+    --blueBg:(355deg, rgba(51,206,255,1) 41%, rgba(30,178,255,1) 92%);
+}
 .skillPage{
     width: 100vw;
-    height: 100vh;
+    height: 120vh;
+}
+.skillP1{
+    position: absolute;
+    top:200vh;
+    height: 80vh;
+    padding-top: 10px;
+}
+.skillP2{
+    position: absolute;
+    top:230vh;
+    right: 0px;
+    width: 35vh;
+    display: block;
+}
+.skillGrid{
+    padding-top: 140px;
+    margin-left: 23%;
+    margin-right: 23%;
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    user-select: none;
+    gap: 20px;
+}
+.skillImg1{
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+.skillImg2{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    padding-top: 60px;
+}
+.skillImg3{
+    margin-top: -60px;
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+.skillText{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    padding-right: 30%;
+    font-family: "Code next book italic";
+    color: var(--blue);
+    font-size: 17px;
+}
+.skillText2{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    padding-right: 30%;
+    font-family: "Cascadia";
+    font-weight: lighter;
+    color: var(--blue);
+    font-size: 17px;
+}
+.skillImg1H, .skillImg2H, .skillImg3H {
+    display: block;
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Ensures element remains in the document flow */
+    transition: opacity 0.8s ease, visibility 0.5s ease; /* Smooth transition */
+}
+
+.hidden {
+    opacity: 0; /* Fully transparent */
+    visibility: hidden; /* Hides the element after fade-out */
+}
+
+
+
+
+/* RESPONSIVE */ 
+/* ---- LAPTOP ---- */
+@media screen and (max-width:1090px) {
+.skillP1{
+    position: absolute;
+    top:200vh;
+    height: 80vh;
+    padding-top: 10px;
+}
+.skillP2{
+    position: absolute;
+    top:230vh;
+    right: 0px;
+    width: 30vh;
+    display: block;
+}
+.skillGrid{
+    padding-top: 140px;
+    margin-left: 23%;
+    margin-right: 23%;
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    user-select: none;
+    gap: 20px;
+}
+.skillImg1{
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+.skillImg2{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    padding-top: 60px;
+}
+.skillImg3{
+    margin-top: -60px;
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+.skillText{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    padding-right: 30%;
+    font-family: "Code next book italic";
+    color: var(--blue);
+    font-size: 15px;
+}
+.skillText2{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    padding-right: 30%;
+    font-family: "Cascadia";
+    font-weight: lighter;
+    color: var(--blue);
+    font-size: 17px;
+}
+}
+
+/* ---- LAPTOP S ---- */
+@media screen and (max-width:968px) {
+    .skillP1{
+        position: absolute;
+        top:200vh;
+        height: 55vh;
+        padding-top: 10px;
+    }
+    .skillP2{
+        position: absolute;
+        top:260vh;
+        right: 0px;
+        width: 20vh;
+        display: block;
+    }
+    .skillGrid{
+        padding-top: 140px;
+        margin-left: 13%;
+        margin-right: 13%;
+        display: grid;
+        grid-template-columns:  1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        user-select: none;
+        gap: 20px;
+    }
+    .skillImg1{
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    .skillImg2{
+        grid-row: 1/2;
+        grid-column: 2/3;
+        padding-top: 60px;
+    }
+    .skillImg3{
+        margin-top: -60px;
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+    .skillText{
+        grid-row: 2/3;
+        grid-column: 2/3;
+        padding-right: 30%;
+        font-family: "Code next book italic";
+        color: var(--blue);
+        font-size: 15px;
+    }
+    .skillText2{
+        grid-row: 1/2;
+        grid-column: 2/3;
+        padding-right: 30%;
+        font-family: "Cascadia";
+        font-weight: lighter;
+        color: var(--blue);
+        font-size: 12px;
+        padding-top: 20px;
+    }
+}
+
+
+/* ---- PHONE ---- */
+@media screen and (max-width:629px) {
+    .skillP1 {
+        position: absolute;
+        top: 200vh;
+        height: 40vh;
+        padding-top: 10px;
+        z-index: -1; /* Moves this element to the back */
+    }
+    
+    .skillP2 {
+        position: absolute;
+        top: 270vh;
+        right: 0px;
+        width: 13vh;
+        display: block;
+        z-index: -1; /* Moves this element to the back */
+    }
+    
+    .skillGrid{
+        width: 200;
+        justify-self: center;
+        padding-top: 60px;
+        margin-left: 19%;
+        margin-right: 19%;
+        display: grid;
+        grid-template-columns:  1fr;
+        grid-template-rows: 0.2fr 2fr 2fr 2fr 2fr ;
+        user-select: none;
+        justify-items: center;
+        gap: 0px;
+    }
+    .skillImg{
+       width: 200px;
+    }
+    .skillImg1{
+        grid-row: 2/3;
+        grid-column: 1/2;
+        margin-top: 5px;
+    }
+    .skillImg2{
+        margin-top: -55px;
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+    .skillImg3{
+        margin-top: 5px;
+        grid-row: 4/5;
+        grid-column: 1/2;
+    }
+    .skillText{
+        margin-top: 20px;
+        grid-row: 5/6;
+        grid-column: 1/2;
+        width: 140px;
+        font-family: "Code next book italic";
+        color: var(--blue);
+        font-size: 10px;
+    }
+    .skillText2{
+        grid-row: 1/2;
+        grid-column: 1/2;
+        margin-left: -50px;
+        font-family: "Cascadia";
+        font-weight: lighter;
+        color: var(--blue);
+        font-size: 10px;
+    }
 }

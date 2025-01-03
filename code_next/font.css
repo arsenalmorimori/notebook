@@ -19,3 +19,7 @@
     font-family: "Code Next ExtraBold";
     src:url(CodeNext-Trial-ExtraBold.ttf)
 }
+@font-face {
+    font-family: "Cascadia";
+    src:url(Cascadia.ttf)
+}
