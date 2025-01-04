@@ -5,7 +5,8 @@
 }
 .skillPage{
     width: 100vw;
-    height: 120vh;
+    height: 100vh;
+    padding-bottom: 110px;
 }
 .skillP1{
     position: absolute;
