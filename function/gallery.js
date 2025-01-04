@@ -40,3 +40,71 @@ closeButton.addEventListener('click', () => {
 // Navigation buttons
 nextButton.addEventListener('click', () => updateImage('next'));
 prevButton.addEventListener('click', () => updateImage('prev'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const buttons = document.querySelectorAll('.homeButtons button');
+const image2 = document.querySelectorAll('.sketchImg, .digitalImg, .pubmatImg, .projectImg');
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        const category = button.textContent.toLowerCase();
+        image2.forEach(img => {
+            img.style.display = img.classList.contains(`${category}Img`) ? 'block' : 'none';
+        });
+    });
+});
+
+
+
+// Function to handle button click and toggle image2
+function handleButtonClick(buttonClass, imageClass) {
+    // Remove the active style from all buttons
+    const buttons = document.querySelectorAll('.homeButtons button');
+    buttons.forEach(button => {
+        button.style.background = 'white';
+        button.style.color = '#1da7ff';
+    });
+
+    // Apply the active style to the clicked button
+    const clickedButton = document.querySelector(`.${buttonClass}`);
+    clickedButton.style.background = 'linear-gradient(180deg, rgb(37, 204, 255) 5%, rgba(14,174,255,1) 98%)';
+    clickedButton.style.color = 'white';
+
+    // Hide all image2
+    const allimage2 = document.querySelectorAll('.sketchImg, .digitalImg, .pubmatImg, .projectImg');
+    allimage2.forEach(image => {
+        image.style.display = 'none';
+    });
+
+    // Show image2 for the selected category
+    const selectedimage2 = document.querySelectorAll(`.${imageClass}`);
+    selectedimage2.forEach(image => {
+        image.style.display = 'block';
+    });
+}
+
+// Add event listeners to buttons
+document.querySelector('.button1').addEventListener('click', () => handleButtonClick('button1', 'digitalImg'));
+document.querySelector('.button2').addEventListener('click', () => handleButtonClick('button2', 'sketchImg'));
+document.querySelector('.button3').addEventListener('click', () => handleButtonClick('button3', 'pubmatImg'));
+document.querySelector('.button4').addEventListener('click', () => handleButtonClick('button4', 'projectImg'));
+
+// Initialize with the default state
+document.addEventListener('DOMContentLoaded', () => {
+    handleButtonClick('button1', 'digitalImg');
+});
+
+

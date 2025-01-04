@@ -1,23 +1,191 @@
+:root{
+    --blue:#1da7ff;
+    --black:#333333;
+    --blueUnHigh:#9ddaff;
+    --blueBg:(355deg, rgba(51,206,255,1) 41%, rgba(30,178,255,1) 92%);
+}
+
 body{
     overflow-x: hidden;
     height: fit-content;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     margin: 0px;
     padding: 0px;
 }
+
+
+/* Sticky container settings */
+
+
+/* Styling for the back-to-home button */
+.backToHome {
+    background-color: white;
+    width: fit-content;
+    padding: 5px 15px 5px 20px;
+    display: flex; /* Enable Flexbox */
+    align-items: center; /* Vertically center text and icon */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 2px 6px #7ccdffbb; /* Light shadow */
+    margin: 0 auto; /* Horizontally center the element */
+    z-index: 9999; /* Ensure it's on top of other content */
+}
+
+.backToHomeDiv {
+    z-index: 9999; /* Ensure it's on top of other content */
+    position: sticky;
+    top: 90vh; /* Dis    tance from the top */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease; /* Smooth transition for fade-in and fade-out */
+}
+
+
+/* Styling for the text */
+.material-symbols-rounded{
+    font-size: 20px;
+}
+.backToHomeText {
+    font-family: "Code Next Book";
+    font-weight: 300;
+    padding-top: 2px;
+    margin-left: 7px; /* Adds space between the icon and text */
+    font-size: 15px;
+}
+.backToHomeDiv:hover {
+    /* Change color of all child elements to blue when the div is hovered */
+  }
+  
+  .backToHomeDiv:hover .material-symbols-rounded,
+  .backToHomeDiv:hover .backToHomeText {
+    color: var(--blue); /* Apply blue color on hover */
+  }
+
+
+
+
+
+
+
 .sketch {
     display: grid; /* Use Grid for layout */
     grid-template-columns: repeat(4, 1fr); /* 3 columns */
-    grid-auto-rows: 1fr; /* Equal row heights */
+    grid-auto-rows: auto; /* Equal row heights */
     gap: 15px; /* Add space between items */
-    justify-content: center; /* Center horizontally */
-    align-content: center; /* Center vertically */
     max-width: 950px; /* Restrict container width */
     margin: auto; /* Center container on the page */
-    padding-top: 40px;
-
 }
+
+
+/* Add this CSS to your stylesheet */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.home {
+    padding-top: 60px;
+    grid-row: 1/2;
+    grid-column: 1/5;
+    display: grid;
+    height: fit-content;
+    grid-template-rows: 1fr 150px;
+    grid-template-columns: 1fr 2fr;
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 1s ease-out forwards; /* Fade-in effect */
+    animation-delay: 0.5s; /* Optional delay */
+}
+
+.homeButtons {
+    margin-top: 70px;
+    grid-row: 2/3;
+    grid-column: 1/3;
+    justify-self: center;
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 1s ease-out forwards; /* Fade-in effect */
+    animation-delay: 0.6s; /* Delays animation for smoother sequence */
+}
+/* CSS */
+.home, .homeButtons {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.home.animate, .homeButtons.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+.home img{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    width: 280px;
+    border-radius: 100%;
+}
+
+.homeText{
+    grid-row: 1/2;
+    grid-column: 2/3; 
+    color: var(--black);
+    margin-top: 10px;
+    margin-left: 60px;
+}
+
+.home h2{
+    font-family: "code next book";
+    margin-bottom: -35px;
+    font-size: 25px;
+}
+.home h1{
+    font-family: "code next book";
+    font-size: 40px;
+}
+
+.home h3{
+    font-family: "code next book";
+    font-weight: 100;
+    padding-right: 40%;
+    font-size: 15px;
+}
+
+button{
+    color: #1da7ff;
+    background-color: white;
+    border: solid;
+    border-radius: 50px;
+    border-width: 1px;
+    padding-top: 8px;
+    padding-bottom: 7px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 6px;
+    margin-right: 6px;
+    font-weight: 300;
+    font-family: "code next book";
+    font-size: 15px;
+    transition: 0.5s;
+}
+
+button:hover{
+    background: rgb(51,206,255);
+    background: linear-gradient(180deg, rgb(37, 204, 255) 5%, rgba(14,174,255,1) 98%);
+    color: white;
+}
+
+.button1{
+    background: rgb(51,206,255);
+    background: linear-gradient(180deg, rgb(37, 204, 255) 5%, rgba(14,174,255,1) 98%);
+    color: white;
+}
+
 
 img {
     width: 100%; /* Make images responsive */
@@ -25,6 +193,74 @@ img {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
     object-fit: cover; /* Ensure images fit within their grid cells */
 }
+.sketchImg{
+    display: none;
+}
+.digitalImg{
+    display: block;
+}
+.pubmatImg{
+    display: none;
+}
+.projectImg{
+    display: none;
+}
+
+.sketch p{
+    grid-column: 1/5;
+    color: var(--black);
+    font-family: "code next book";
+    margin-top: 40px;
+    margin-bottom: -5px;
+    font-size: 18px;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.sketch .digitalImg, .sketchImg, .pubmatImg, .projectImg {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 2s ease forwards;
+    animation-delay:1s;
+}
+.sketch .sketchImg, .pubmatImg, .projectImg {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 2s ease forwards;
+    animation-delay:0s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
 
 /* Fullscreen viewer container */
 .fullscreen-viewer {
@@ -121,7 +357,7 @@ img {
     .sketch {
         display: grid; /* Use Grid for layout */
         grid-template-columns: repeat(4, 1fr); /* 3 columns */
-        grid-auto-rows: 1fr; /* Equal row heights */
+        grid-auto-rows: auto; /* Equal row heights */
         gap: 15px; /* Add space between items */
         justify-content: center; /* Center horizontally */
         align-content: center; /* Center vertically */
@@ -132,37 +368,282 @@ img {
         padding-right: 90px;
     
     }   
+    .home{
+        padding-top: 20px;
+        grid-row: 1/2;
+        grid-column: 1/5;
+        display: grid;
+        height: fit-content;
+        grid-template-rows: 1fr 120px;
+        grid-template-columns: 1fr 2fr;
+    }
+    
+    .home img{
+        grid-row: 1/2;
+        grid-column: 1/2;
+        width: 290px;
+        border-radius: 100%;
+    }
+    
+    .homeText{
+        grid-row: 1/2;
+        grid-column: 2/3; 
+        color: var(--black);
+        margin-top: 10px;
+        margin-left: 60px;
+    }
+    
+    .home h2{
+        font-family: "code next book";
+        margin-bottom: -30px;
+        font-size: 20px;
+    }
+    .home h1{
+        font-family: "code next book";
+        font-size: 30px;
+    }
+    
+    .home h3{
+        font-family: "code next book";
+        font-weight: 100;
+        padding-right: 40%;
+        font-size: 13px;
+    }
+    
+    .homeButtons{
+        margin-top: 70px;
+        grid-row: 2/3;
+        grid-column: 1/3;
+        justify-self: center;
+    }
+    button{
+        color: #1da7ff;
+        background-color: white;
+        border: solid;
+        border-radius: 50px;
+        border-width: 1px;
+        padding-top: 6px;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 6px;
+        margin-right: 6px;
+        font-weight: 300;
+        font-family: "code next book";
+        font-size: 11px;
+        transition: 0.5s;
+    }
+    
+    button:hover{
+        background: rgb(51,206,255);
+        background: linear-gradient(180deg, rgb(37, 204, 255) 5%, rgba(14,174,255,1) 98%);
+        color: white;
+    }
 }
 
 @media screen and (max-width:800px) {
+    
+    .backToHomeText {
+        font-family: "Code Next Book";
+        font-weight: 300;
+        padding-top: 2px;
+        margin-left: 7px; /* Adds space between the icon and text */
+        font-size: 10px;
+    }
     .sketch {
         display: grid; /* Use Grid for layout */
         grid-template-columns: repeat(3, 1fr); /* 3 columns */
-        grid-auto-rows: 1fr; /* Equal row heights */
+        grid-auto-rows: auto; /* Equal row heights */
         gap: 10px; /* Add space between items */
         justify-content: center; /* Center horizontally */
         align-content: center; /* Center vertically */
-        max-width: 950px; /* Restrict container width */
+        /* max-width: 950px; Restrict container width */
         margin: auto; /* Center container on the page */
         padding-top: 40px;
         padding-left: 60px;
         padding-right: 60px;
     
-    }   
+    }
+    
+.sketch p{
+    grid-column: 1/4;
+    color: var(--black);
+    font-family: "code next book";
+    margin-top: 40px;
+    margin-bottom: -0px;
+    font-size: 18px;
+}     
+    .home{
+        padding-top: 20px;
+        grid-row: 1/2;
+        grid-column: 1/4;
+        display: grid;
+        height: fit-content;
+        grid-template-rows: 1fr 120px;
+        grid-template-columns: 1fr 2fr;
+    }
+    
+    .home img{
+        grid-row: 1/2;
+        grid-column: 1/2;
+        width: 290px;
+        border-radius: 100%;
+    }
+    
+    .homeText{
+        grid-row: 1/2;
+        grid-column: 2/3; 
+        color: var(--black);
+        margin-top: 10px;
+        margin-left: 60px;
+    }
+    
+    .home h2{
+        font-family: "code next book";
+        margin-bottom: -20px;
+        font-size: 17px;
+    }
+    .home h1{
+        font-family: "code next book";
+        font-size: 23px;
+    }
+    
+    .home h3{
+        font-family: "code next book";
+        font-weight: 100;
+        padding-right: 30%;
+        font-size: 10px;
+    }
+    
+    .homeButtons{
+        margin-top: 60px;
+        grid-row: 2/3;
+        grid-column: 1/3;
+        justify-self: center;
+    }
+    button{
+        color: #1da7ff;
+        background-color: white;
+        border: solid;
+        border-radius: 50px;
+        border-width: 1px;
+        padding-top: 6px;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 6px;
+        margin-right: 6px;
+        font-weight: 300;
+        font-family: "code next book";
+        font-size: 11px;
+        transition: 0.5s;
+    }
+    
+    button:hover{
+        background: rgb(51,206,255);
+        background: linear-gradient(180deg, rgb(37, 204, 255) 5%, rgba(14,174,255,1) 98%);
+        color: white;
+    }
 }
-@media screen and (max-width:426px) {
+@media screen and (max-width:552px) {
     .sketch {
         display: grid; /* Use Grid for layout */
         grid-template-columns: repeat(2, 1fr); /* 3 columns */
-        grid-auto-rows: 1fr; /* Equal row heights */
+        grid-auto-rows: auto; /* Equal row heights */
         gap: 10px; /* Add space between items */
         justify-content: center; /* Center horizontally */
         align-content: center; /* Center vertically */
         max-width: 950px; /* Restrict container width */
         margin: auto; /* Center container on the page */
-        padding-top: 40px;
+        padding-top: 10px;
         padding-left: 20px;
         padding-right: 20px;
     
-    }   
+    }    
+    .sketch p{
+        grid-column: 1/3;
+        color: var(--black);
+        font-family: "code next book";
+        margin-top: 40px;
+        margin-bottom: -0px;
+        font-size: 15px;
+    }      
+    .home{
+        padding-top: 20px;
+        grid-row: 1/2;
+        grid-column: 1/3;
+        display: grid;
+        height: fit-content;
+        grid-template-rows: 1fr 1fr 120px;
+        grid-template-columns: 1fr;
+    }
+    
+    .home img{
+        grid-row:1/2;
+        grid-column: 1/3;
+        width: 190px;
+        align-self: center;
+        justify-self: center;
+        background-color: aqua;
+    }
+    
+    .homeText{
+        grid-row: 2/3;
+        grid-column: 2/3; 
+        color: var(--black);
+        margin-top: 20px;
+        margin-left: 0px;
+        justify-self: center;
+        text-align: center;
+    }
+    
+    .home h2{
+        font-family: "code next book";
+        margin-bottom: -19px;
+        font-size: 15px;
+    }
+    .home h1{
+        font-family: "code next book";
+        font-size: 25px;
+    }
+    
+    .home h3{
+        font-family: "code next book";
+        font-weight: 100;
+        font-size: 10px;
+        padding-right: 0px;
+        text-align: center;
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+    
+    .homeButtons{
+        margin-top: 70px;
+        grid-row: 3/4;
+        grid-column: 1/3;
+        justify-self: center;
+    }
+    button{
+        color: #1da7ff;
+        background-color: white;
+        border: solid;
+        border-radius: 50px;
+        border-width: 1px;
+        padding-top: 5px;
+        padding-bottom: 4px;
+        padding-left: 14px;
+        padding-right: 14px;
+        margin-left: 1px;
+        margin-right: 1px;
+        font-weight: 300;
+        font-family: "code next book";
+        font-size: 10px;
+        transition: 0.5s;
+    }
+    
+    button:hover{
+        background: rgb(51,206,255);
+        background: linear-gradient(180deg, rgb(37, 204, 255) 5%, rgba(14,174,255,1) 98%);
+        color: white;
+    }
 }

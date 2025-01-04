@@ -1,0 +1,13 @@
+/* Initially hide sections */
+section {
+    opacity: 0;
+    transform: translateY(20px);  /* Move sections down for initial animation */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth transition */
+}
+
+/* Add class for fade-in effect */
+.fade-in {
+    opacity: 1;
+    transform: translateY(0); /* Bring section back to its normal position */
+    transition: opacity 1s ease, transform 1s ease;
+}
