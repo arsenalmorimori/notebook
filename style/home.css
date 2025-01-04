@@ -7,6 +7,83 @@
 body{
     user-select: 400%;
 }
+/* Full page overlay for the loading screen */
+/* Full page overlay for the loading screen */
+#loadingScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff; /* White background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Make sure it's on top */
+    opacity: 1; /* Start fully visible */
+    visibility: visible;
+}
+
+/* Loading container for the spinner and message */
+.loadingContainer {
+    text-align: center;
+    
+}
+
+/* Modern spinner */
+.spinner {
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Light gray border */
+    border-top: 4px solid #3498db; /* Blue color for the spinner */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 30px;
+}
+
+/* Spinner animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/* Fade-out effect */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Loading message style */
+#loadingScreen p {
+    color: var(--blue);
+    font-family: "code next book";
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Fade-out the loading screen once everything is loaded */
+.loaded #loadingScreen {
+    animation: fadeOut 1s ease-in-out forwards; /* Apply fade-out animation */
+}
+
 
 .homePage{
     width: 100vw;
@@ -40,6 +117,8 @@ body{
     border-radius: 20px; /* Rounded corners */
     box-shadow: 0 2px 6px #7ccdffbb; /* Light shadow */
     margin: 0 auto; /* Horizontally center the element */
+    user-select: none;
+    cursor: pointer;
 }
 
 .backToHomeDiv {

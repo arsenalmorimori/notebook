@@ -28,6 +28,11 @@ window.addEventListener("scroll", () => {
 });
 
 
+// Wait for the entire page (images, fonts, etc.) to load before hiding the loading screen
+window.addEventListener('load', function() {
+  // Add a class to fade out the loading screen
+  document.body.classList.add('loaded');
+});
 
 
 

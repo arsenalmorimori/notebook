@@ -1,13 +1,23 @@
-/* Initially hide sections */
-section {
+
+
+/* Home Page Styling */
+.homePage img, .homePage h1, .homePage h2,
+.aboutPage img, .aboutPage h1, .aboutPage h2, .aboutIconWrapper, .aboutPic {
     opacity: 0;
-    transform: translateY(20px);  /* Move sections down for initial animation */
-    transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth transition */
+    transition: opacity 0.5s ease-in-out; /* Fade in over 0.5s */
 }
 
-/* Add class for fade-in effect */
-.fade-in {
-    opacity: 1;
-    transform: translateY(0); /* Bring section back to its normal position */
-    transition: opacity 1s ease, transform 1s ease;
+
+/* Set the initial state for elements inside skillPage */
+.skillPage img, .skillPage h1, .skillPage p {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Fade in over 1 second */
 }
+
+/* Set initial opacity to 0 for all the target elements */
+.projectPage img, .projectPage h1, .projectPage h2, .projectLeft, .projectPic {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Smooth fade-in effect */
+}
+
+/* Add any other styling for the skill page as needed */

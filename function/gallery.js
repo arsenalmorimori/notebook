@@ -108,3 +108,27 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+
+
+
+
+
+
+// Select the back button
+const backButton = document.querySelector('.back');
+
+// Add a scroll event listener to the window
+window.addEventListener('scroll', () => {
+    // Calculate the scroll position
+    const scrollPosition = window.scrollY;
+
+    // Adjust the opacity to make the fade-out faster (lower threshold)
+    const fadeOutOpacity = Math.max(1 - scrollPosition / 50, 0); // Now fades out over 150px scroll
+    backButton.style.opacity = fadeOutOpacity.toString();
+});
+
+
+
+
+  

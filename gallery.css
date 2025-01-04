@@ -12,11 +12,27 @@ body{
     height: 100%;
     margin: 0px;
     padding: 0px;
+    user-select: none;
 }
 
 
-/* Sticky container settings */
 
+
+
+
+.back{
+    position: sticky;
+    top: 20px;
+    left: 35px;
+    font-family: "code next book";
+    width: 35px;
+    box-shadow: none;
+    transition: 0.5s;
+    opacity: 0.4;
+}
+.back:hover{
+    opacity: 1;
+}
 
 /* Styling for the back-to-home button */
 .backToHome {
@@ -38,6 +54,7 @@ body{
     opacity: 0; /* Initially hidden */
     transition: opacity 0.5s ease; /* Smooth transition for fade-in and fade-out */
 }
+
 
 
 /* Styling for the text */
@@ -73,6 +90,7 @@ body{
     gap: 15px; /* Add space between items */
     max-width: 950px; /* Restrict container width */
     margin: auto; /* Center container on the page */
+    padding-bottom: 120px;
 }
 
 
@@ -157,6 +175,7 @@ body{
 }
 
 button{
+    cursor: pointer;
     color: #1da7ff;
     background-color: white;
     border: solid;
@@ -188,6 +207,7 @@ button:hover{
 
 
 img {
+    cursor: pointer;
     width: 100%; /* Make images responsive */
     border-radius: 10px; /* Add modern rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
@@ -354,6 +374,16 @@ img {
 
 
 @media screen and (max-width:1167px) {
+    
+.back{
+    position: sticky;
+    top: 20px;
+    left: 35px;
+    font-family: "code next book";
+    width: 25px;
+    box-shadow: none;
+}
+
     .sketch {
         display: grid; /* Use Grid for layout */
         grid-template-columns: repeat(4, 1fr); /* 3 columns */
@@ -443,6 +473,15 @@ img {
 
 @media screen and (max-width:800px) {
     
+.back{
+    position: sticky;
+    top: 20px;
+    left: 35px;
+    font-family: "code next book";
+    width: 25px;
+    box-shadow: none;
+}
+
     .backToHomeText {
         font-family: "Code Next Book";
         font-weight: 300;
@@ -546,6 +585,16 @@ img {
     }
 }
 @media screen and (max-width:552px) {
+    
+.back{
+    position: sticky;
+    top: 20px;
+    left: 25px;
+    font-family: "code next book";
+    width: 20px;
+    box-shadow: none;
+}
+
     .sketch {
         display: grid; /* Use Grid for layout */
         grid-template-columns: repeat(2, 1fr); /* 3 columns */
