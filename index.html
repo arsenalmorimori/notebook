@@ -73,12 +73,16 @@
             <h2> I am <u><b>John Nesty Bautista</b></u>, also known as <b>Mashiro</b>, an experienced ICT student with a passion for programming and design. I specialize in Full-Stack Development and Graphic Design, with <i><b>expertise in creating social media publishing materials</i></b> for announcements and school activities. I leverage my skills to seamlessly blend technology and creativity in bringing ideas to life.</h2>
             <div class="aboutIconDiv">
                 <div class="aboutIconWrapper">
-                    <img class="aboutIcon" src="asset/about/aboutIgIcon.webp">
+                    <img onclick="openLink('instagram.html')" class="aboutIcon" src="asset/about/aboutIgIcon.webp">
                     <span class="aboutTooltip">@arsenal_creation <br/>@arsenal_moritakaa</span>
                 </div>
                 <div class="aboutIconWrapper">
-                    <img class="aboutIconGithub" src="asset/about/aboutGithubIcon.webp">
+                    <img onclick="openLink('https://github.com/arsenalmorimori')" class="aboutIconGithub" src="asset/about/aboutGithubIcon.webp">
                     <span class="aboutTooltip">arsenal_morimori</span>
+                </div>
+                <div class="aboutIconWrapper">
+                    <img onclick="openLink('https://gmail.google.com/mail/?view=cm&fs=1&to=mashirocipher1@gmail.com')" class="aboutIconGmail" src="asset/about/gmail.png">
+                    <span class="aboutTooltip">mashirocipher1@gmail.com</span>
                 </div>
             </div>
             
@@ -120,5 +124,10 @@
      <script rel="module" src="function/nav.js"></script>
      <script rel="module" src="function/skill.js"></script>
 </body>
-
+<script>
+    // Function to open a link in a new blank tab when an image is clicked
+    function openLink(url) {
+        window.open(url, '_blank'); // Opens the URL in a new tab
+    }
+</script>
 </html>

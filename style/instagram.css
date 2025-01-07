@@ -1,0 +1,181 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+}
+
+.back {
+    position: absolute;
+    width: 3vw;
+    top: 25px;
+    left: 40px;
+    opacity: 0;
+    animation: fadeInBack 1s ease-in forwards;
+    animation-delay: 2s; /* Delays the back image */
+    transition: 0.5s;
+}
+.back:hover{
+    position: absolute;
+    width: 3vw;
+    top: 25px;
+    left: 40px;
+    opacity: 0;
+    animation: fadeInBack 1s ease-in forwards;
+    animation-delay: 2s; /* Delays the back image */
+    transition: 0.5s;
+}
+
+.div {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+}
+img {
+    width: 23vw;
+    margin: 0px;
+    padding: 0px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    transition: 0.5s;
+}
+
+.row1 img {
+    animation-delay: 0.5s; /* First image fades in */
+}
+
+.row2 img {
+    animation-delay: 1s; /* Second image fades in */
+}
+
+.row1 {
+    display: grid;
+    grid-row: 1/2;
+    align-items: end; /* Vertically centers the content */
+    justify-items: center; /* Horizontally centers the content */
+}
+
+.row2 {
+    display: grid;
+    grid-row: 2/3;
+    align-items: start; /* Vertically centers the content */
+    justify-items: center; /* Horizontally centers the content */
+}
+
+img:hover {
+    width: 24vw;
+}
+
+@media screen and (max-width: 769px) {
+    .back {
+        position: absolute;
+        width: 3vw;
+        top: 25px;
+        left: 40px;
+        opacity: 0;
+        animation: fadeInBack 1s ease-in forwards;
+        animation-delay: 2s; /* Delays the back image */
+        transition: 0.5s;
+    }.back:hover {
+        position: absolute;
+        width: 3vw;
+        top: 25px;
+        left: 40px;
+        opacity: 0;
+        animation: fadeInBack 1s ease-in forwards;
+        animation-delay: 2s; /* Delays the back image */
+        transition: 0.5s;
+    }
+    img {
+        width: 35vw;
+        margin: 0px;
+        padding: 0px;
+        transition: 0.5s;
+    }
+
+    .row1 {
+        display: grid;
+        grid-row: 1/2;
+        align-items: end; /* Vertically centers the content */
+        justify-items: center; /* Horizontally centers the content */
+    }
+
+    .row2 {
+        display: grid;
+        grid-row: 2/3;
+        align-items: start; /* Vertically centers the content */
+        justify-items: center; /* Horizontally centers the content */
+    }
+
+    img:hover {
+        width: 36vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .back {
+        position: absolute;
+        width: 8vw;
+        top: 30px;
+        left: 25px;
+        opacity: 0;
+        animation: fadeInBack 1s ease-in forwards;
+        animation-delay: 2s; /* Delays the back image */
+        transition: 0.5s;
+    }.back:hover {
+        position: absolute;
+        width: 8vw;
+        top: 30px;
+        left: 25px;
+        opacity: 0;
+        animation: fadeInBack 1s ease-in forwards;
+        animation-delay: 2s; /* Delays the back image */
+        transition: 0.5s;
+    }
+    img {
+        width: 63vw;
+        margin: 0px;
+        padding: 0px;
+        transition: 0.5s;
+    }
+
+    .row1 {
+        display: grid;
+        grid-row: 1/2;
+        align-items: end; /* Vertically centers the content */
+        justify-items: center; /* Horizontally centers the content */
+    }
+
+    .row2 {
+        display: grid;
+        grid-row: 2/3;
+        align-items: start; /* Vertically centers the content */
+        justify-items: center; /* Horizontally centers the content */
+    }
+
+    img:hover {
+        width: 64vw;
+    }
+}
+
+/* Keyframe for fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Keyframe for fade-in effect for back button */
+@keyframes fadeInBack {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.35;
+    }
+}
