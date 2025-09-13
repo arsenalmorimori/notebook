@@ -32,6 +32,9 @@ body{
 
 /* Modern spinner */
 .spinner {
+    margin-left: 1.3rem;
+    display: flex;
+    justify-content: center;
     border: 2px solid rgba(255, 255, 255, 0.3); /* Light gray border */
     border-top: 4px solid #3498db; /* Blue color for the spinner */
     border-radius: 50%;

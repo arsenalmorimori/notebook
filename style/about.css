@@ -44,6 +44,11 @@
     
 }
 
+.aboutIconLinkedin{
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+}
 .aboutIconGithub{
     width: 50px;
     height: 50px;
@@ -59,6 +64,7 @@
 .aboutIcon{
     width: 50px;
     height: 50px;
+    margin-left: 30px;
     transition: 0.5s;
 }
 .aboutIconDiv{
@@ -158,6 +164,11 @@
     padding-top: 90px;
 }
 
+.aboutIconLinkedin{
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+}
 .aboutIconGithub{
     width: 40px;
     height: 40px;
