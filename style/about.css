@@ -78,6 +78,10 @@
     width: 55px;
     height: 55px;
 }
+.aboutIconLinkedin:hover{
+    width: 55px;
+    height: 55px;
+}
 .aboutIconGmail:hover{
     width: 55px;
     height: 55px;
@@ -116,7 +120,7 @@
 }
 
 /* Hover effect for icons */
-.aboutIcon:hover, .aboutIconGithub:hover, .aboutIconGmail:hover {
+.aboutIconLinkedin:hover, .aboutIcon:hover, .aboutIconGithub:hover, .aboutIconGmail:hover {
     width: 55px;
     height: 55px;
     transition: 0.5s;
@@ -191,9 +195,15 @@
     margin-left: 90px;
     margin-top: 25px;
 }
+.aboutIconLinkedin:hover{
+    width: 45px;
+    height: 45px;
+    transition: 0.5s;
+}
 .aboutIconGithub:hover{
     width: 45px;
     height: 45px;
+    transition: 0.5s;
 }
 .aboutIconGmail:hover{
     width: 45px;
@@ -202,6 +212,7 @@
 .aboutIcon:hover{
     width: 45px;
     height: 45px;
+    transition: 0.5s;
 }
 .aboutIconGithub{
     margin-left: 30px;
@@ -253,6 +264,11 @@
     }
     
 
+    .aboutIconLinkedin{
+        width: 40px;
+        height: 40px;
+        transition: 0.5s;
+    }
     .aboutIconGithub{
         width: 40px;
         height: 40px;
@@ -274,6 +290,10 @@
         display: flex;
         margin-left: 90px;
         margin-top: 25px;
+    }
+    .aboutIconLinkedin:hover{
+        width: 45px;
+        height: 45px;
     }
     .aboutIconGithub:hover{
         width: 45px;
@@ -358,6 +378,11 @@
         margin-left: 20px;
     }
     
+.aboutIconLinkedin{
+    width: 20px;
+    height: 20px;
+    transition: 0.5s;
+}
 .aboutIconGithub{
     width: 20px;
     height: 20px;
@@ -379,6 +404,11 @@
     display: flex;
     margin-left: 50px;
     margin-top: 25px;
+}
+.aboutIconLinkedin:hover{
+    width: 25px;
+    height: 25px;
+    transition: 0.5s;
 }
 .aboutIconGithub:hover{
     width: 25px;
