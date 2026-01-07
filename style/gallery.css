@@ -225,15 +225,69 @@ img {
 .projectImg{
     display: none;
 }
-
+.programImg{
+    display: none;
+}
 .sketch p{
     grid-column: 1/5;
     color: var(--black);
     font-family: "code next book";
-    margin-top: 40px;
-    margin-bottom: -5px;
+    margin-top: 45px;
+    margin-bottom: -20px;
     font-size: 18px;
 }
+.sketch .tag{
+    grid-column: 1/5;
+    color: var(--black);
+    font-family: "code next book";
+    margin-bottom: 15px;
+    font-size: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.sketch .tag li{
+  display: inline-block; /* Aligns items horizontally */
+  background-color: purple;
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem; 
+  margin-right: 0.1rem;    /* Adds space between items */
+  color: rgb(255, 255, 255);
+}
+.sketch .tag li.web{
+  background-color: #4dc9fa;
+}
+.sketch .tag li.js{
+  background-color: #fed650;
+}
+.sketch .tag li.fb{
+  background-color: #ff546e;
+}
+.sketch .tag li.fb div{
+  display: inline-block; /* Aligns items horizontally */
+}
+.sketch .tag li.blazor{
+  background-color: #0086ff;
+}
+.sketch .tag li.cs{
+  background-color: #9ea2fd;
+}
+.sketch .tag li.andr{
+  background-color: #75e291;
+}
+.sketch .tag li.active{
+  background-color: #75e291;
+}
+.sketch .tag li.sp{
+  background-color: #34d19d;
+}
+.sketch .tag li.conApp{
+  background-color: #e08af1;
+}
+.sketch .tag li.webapp{
+  background-color: #4dc9fa;
+}
+
 
 
 @keyframes fadeIn {
@@ -254,13 +308,13 @@ img {
     }
 }
 
-.sketch .digitalImg, .sketchImg, .pubmatImg, .projectImg {
+.sketch .digitalImg, .sketchImg, .pubmatImg, .projectImg, .programImg {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeIn 2s ease forwards;
     animation-delay:1s;
 }
-.sketch .sketchImg, .pubmatImg, .projectImg {
+.sketch .sketchImg, .pubmatImg, .projectImg, .programImg {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeIn 2s ease forwards;

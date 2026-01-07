@@ -56,7 +56,7 @@ prevButton.addEventListener('click', () => updateImage('prev'));
 
 
 const buttons = document.querySelectorAll('.homeButtons button');
-const image2 = document.querySelectorAll('.sketchImg, .digitalImg, .pubmatImg, .projectImg');
+const image2 = document.querySelectorAll('.sketchImg, .digitalImg, .pubmatImg, .projectImg, .programImg');
 
 buttons.forEach(button => {
     button.addEventListener('click', () => {
@@ -84,7 +84,7 @@ function handleButtonClick(buttonClass, imageClass) {
     clickedButton.style.color = 'white';
 
     // Hide all image2
-    const allimage2 = document.querySelectorAll('.sketchImg, .digitalImg, .pubmatImg, .projectImg');
+    const allimage2 = document.querySelectorAll('.sketchImg, .digitalImg, .pubmatImg, .projectImg, .programImg');
     allimage2.forEach(image => {
         image.style.display = 'none';
     });
@@ -101,6 +101,7 @@ document.querySelector('.button1').addEventListener('click', () => handleButtonC
 document.querySelector('.button2').addEventListener('click', () => handleButtonClick('button2', 'sketchImg'));
 document.querySelector('.button3').addEventListener('click', () => handleButtonClick('button3', 'pubmatImg'));
 document.querySelector('.button4').addEventListener('click', () => handleButtonClick('button4', 'projectImg'));
+document.querySelector('.button5').addEventListener('click', () => handleButtonClick('button5', 'programImg'));
 
 // Initialize with the default state
 document.addEventListener('DOMContentLoaded', () => {
