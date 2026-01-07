@@ -288,6 +288,31 @@ img {
   background-color: #4dc9fa;
 }
 
+.sketch ul.link{
+    grid-column: 1/5;
+    color: var(--black);
+    font-family: "code next book";
+    margin-bottom: 15px;
+    font-size: 15px;
+    list-style: none;
+    padding: 0;
+}
+.sketch ul.link li{
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem; 
+  margin-right: 0.1rem;    /* Adds space between items */
+  color: rgb(255, 255, 255);
+}
+.sketch ul.link a{
+  color: #969696;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.sketch ul.link a:hover{
+  color: var(--blue);
+  transition: 0.5s;
+}
+
 
 
 @keyframes fadeIn {
